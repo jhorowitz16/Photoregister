@@ -1,0 +1,77 @@
+<html>
+
+<head>
+	<title> Register product </title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<img class="header-logo" src="photoregister.png">
+
+	<h1 class="headline"> 
+			The fastest way to register products direct with the brands you buy.
+	</h1>
+
+	<div id="photoregister" class="content">
+		<div class="photoregister">
+			<label class="photoregister__camera">
+				<div>Tap to take a picture</div>
+				<input type="file" capture="camera" accept="image/*" hidden>
+			</label>
+			<input id = "input-code" placeholder="Or enter your code here..." class="photoregister__code" type="text">
+		</div>
+
+		<input id="button--register" class="button button--primary" type="submit" value="Register">
+
+		<div id="button-logout">
+			<div id="username-doublecheck" class="button button--text text-secondary text-center">Not username?</div>
+		</div>
+	</div>
+
+	<div id="new-user" class="content content--active new-user">
+		<h1 class="instruction">Step 1</h1>
+		<p>
+			Begin registering by entering your phone number or email address.
+		</p>
+		<form id="contact-form">
+			<label class="form-label" for="user-contact">Email or phone</label>
+			<input class="input-text" type="text" id="user-contact" required>
+		
+
+			<div class="geoformatting" id="geoformatting-questionaire">
+				<div id="geolocation-authorization">
+					<button class="button button--text" id="authorize-geolocate" type="button">Geolocate me</button>
+					<p class="text-secondary">Geolocation allows Photoregister to help you complete your registration in less steps.</p>
+				</div>
+
+				<div id="geolocation-form" class="hidden">
+					<label class="form-label" for="postal-code">Postal code</label>
+					<input class="input-text" type="text" id="postal-code" required>
+					<button class="button button--text secondary" id="reverse-geolocate" type="button">Look up this postal code</button>
+				</div>
+
+				<div id="address-confirmation" class="hidden text-center">
+					<p class="text-secondary">Is this address correct?</p>
+					<div class="address" id="address"></div>
+					<button class="button button--text address-button" id="confirm-address">Yes</button>
+					<button class="button button--text address-button" id="discard-address">No</button>
+				</div>
+			</div>
+		</form>
+		<input class="button button--primary" type="submit" form="contact-form" value="Next">
+	 </div>
+
+	<!--	Brands and terms and services link	-->
+	<ul class="footer-links">
+		<li class="footer-links__link">
+			<a class="link" href="https://photoregister.com">Brands</a>
+		</li>
+		<li class="footer-links__link">
+			<a class="link" href="https://photoregister.com/tos">Terms of Services</a>
+		</li>
+	</ul>
+
+	<script src="photoregister.js"></script>
+</body>
+
+</html>
